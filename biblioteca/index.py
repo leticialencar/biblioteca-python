@@ -115,6 +115,10 @@ def aluga_livro(alugar, locador, dias):
     global dias_p_devolver1, dias_p_devolver2, dias_p_devolver3, dias_p_devolver4, dias_p_devolver5
     global dias_v1, dias_v2, dias_v3, dias_v4, dias_v5
 
+    while dias < 0:
+        print("Por favor, insira um número de dias válido.")
+        dias = int(input("Digite a quantidade de dias para locação: "))
+
     if alugar == livro_titulo1 and dias_v1 == True:
         livro_locador1 = locador
         dias_p_devolver1 = dias
